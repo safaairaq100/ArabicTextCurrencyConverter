@@ -18,7 +18,8 @@ namespace ArabicCurrencyConverter.Tests
             var provider = services.BuildServiceProvider();
 
             _converter = provider.GetRequiredService<IArabicCurrencyService>()
-                .SetCurrencyForms("دينار", "ديناران", "دنانير", "فلس", "فلسان", "فلوس")
+                //.SetCurrencyForms("دينار", "ديناران", "دنانير", "فلس", "فلسان", "فلوس")
+                .SetDefaultCurrency("دينار","فلس",true)
                 .UseAmountLimiter(true);
         }
 
@@ -57,6 +58,7 @@ namespace ArabicCurrencyConverter.Tests
                 (100000000000.99, "Upper range valid"),
                 (1000000000000.00, "Overflow limit"),
                 (0.5, "Fractional only"),
+                (2211.221, "Fractional 3 digit"),
             };
 
             var sb = new StringBuilder();

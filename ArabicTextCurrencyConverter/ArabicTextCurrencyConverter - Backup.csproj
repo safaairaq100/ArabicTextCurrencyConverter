@@ -8,7 +8,6 @@
     <Description>Arabic text currency converter for .NET 8 with Arabic grammar, DI, formal mode (tanwīn), and "فقط ... لا غير".</Description>
     <PackageProjectUrl>https://github.com/safaairaq100/ArabicTextCurrencyConverter</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageReadmeFile></PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -83,6 +83,7 @@
             if (number == 0)
                 return ApplyWrapper(FormatUnit($"صفر {mainUnit}"));
 
+            // Range guard
             if (_useThreeDecimal && number > 999_999_999_999.999 ||
                 !_useThreeDecimal && number > 999_999_999_999.99)
                 return "قيمة كبيرة جداً";
@@ -98,24 +99,38 @@
             string mainCurrency = GetCurrencyForm(integerPart, mainUnit, mainUnitDual, mainUnitPlural);
             string subCurrency = GetCurrencyForm(decimalPart, subUnit, subUnitDual, subUnitPlural);
 
+            // Special handling for large decimals (e.g. 11–99 فلس)
             if (decimalPart >= 11)
                 subCurrency = subUnit;
 
-            string formattedMain = $"{integerText} {mainCurrency}";
-            if (integerPart == 1)
-                formattedMain = $"{mainCurrency} واحد";
-            else if (integerPart == 2)
-                formattedMain = mainCurrency;
-
             string result;
-            if (decimalPart > 0)
-                result = $"{formattedMain} و{decimalText} {subCurrency}";
-            else
-                result = formattedMain;
 
+            // Handle fractional-only numbers (like 0.5 => خمسون فلس)
+            if (integerPart == 0 && decimalPart > 0)
+            {
+                result = $"{decimalText} {subCurrency}";
+            }
+            else
+            {
+                string formattedMain = $"{integerText} {mainCurrency}";
+                if (integerPart == 1)
+                    formattedMain = $"{mainCurrency} واحد";
+                else if (integerPart == 2)
+                    formattedMain = mainCurrency;
+
+                if (decimalPart > 0)
+                    result = $"{formattedMain} و{decimalText} {subCurrency}";
+                else
+                    result = formattedMain;
+            }
+
+            // Apply grammatical and formal Arabic adjustments
             result = _useFormalArabic ? ApplyFormalArabic(result) : result;
+
+            // Add wrapper "فقط ... لا غير" if enabled
             return ApplyWrapper(result);
         }
+
 
         private string ConvertNumber(long number)
         {
