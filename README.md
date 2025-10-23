@@ -33,7 +33,7 @@ It’s ideal for:
 
 ---
 
-## 🧱 Installation
+## 💻 Installation
 
 Add reference in your project:
 
