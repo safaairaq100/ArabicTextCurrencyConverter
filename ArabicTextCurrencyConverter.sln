@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArabicTextCurrencyConverter", "ArabicTextCurrencyConverter\ArabicTextCurrencyConverter.csproj", "{C002D041-914D-43C4-B62D-91F9A471AD81}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArabicCurrencyConverter.Tests", "ArabicCurrencyConverter.Tests\ArabicCurrencyConverter.Tests.csproj", "{ABEC2615-6564-4FA6-A6A0-DC88EE2EE82B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C002D041-914D-43C4-B62D-91F9A471AD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C002D041-914D-43C4-B62D-91F9A471AD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C002D041-914D-43C4-B62D-91F9A471AD81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABEC2615-6564-4FA6-A6A0-DC88EE2EE82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEC2615-6564-4FA6-A6A0-DC88EE2EE82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEC2615-6564-4FA6-A6A0-DC88EE2EE82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEC2615-6564-4FA6-A6A0-DC88EE2EE82B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
