@@ -1,4 +1,4 @@
-# Arabic Currency Converter for .NET 8
+# Arabic Text Currency Converter for .NET 8
 
 ### Convert numbers to grammatically correct Arabic text with currency units  
 Supports **singular, dual, plural**, **formal Arabic (tanwīn)**, and **official formatting** such as  
