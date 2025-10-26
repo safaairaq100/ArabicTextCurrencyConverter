@@ -8,7 +8,7 @@ Supports **singular, dual, plural**, **formal Arabic (tanwīn)**, and **official
 
 ## 📦 Overview
 
-`ArabicCurrencyConverter` is a lightweight .NET 8 library that converts numeric values into **Arabic text currency strings**.  
+`ArabicTextCurrencyConverter` is a lightweight .NET 8 library that converts numeric values into **Arabic text currency strings**.  
 It fully supports Arabic grammar rules (singular/dual/plural), Arabic scales (ألف / مليون / مليار), and integrates cleanly with **Dependency Injection (DI)**.
 
 It’s ideal for:
@@ -38,7 +38,7 @@ It’s ideal for:
 Add reference in your project:
 
 ```bash
-dotnet add package ArabicCurrencyConverter
+dotnet add package ArabicTextCurrencyConverter
 ```
 ```csharp
 using ArabicTextCurrencyConverter;
