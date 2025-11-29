@@ -126,7 +126,14 @@ currencyService.SetDefaultCurrency("دينار", "فلس", useThreeDecimal: true
 // Startup.cs or Program.cs
 services.AddArabicCurrencyService();
 
-// Somewhere in your code
+var app = builder.Build();
+app.Services.UseArabicTextCurrency()
+       .SetDefaultCurrency("دينار", "فلس")
+       .SetCurrencyForms("دينار", "ديناران", "دنانير", "فلس", "فلسان", "فلوس")
+       .UseFormalArabic(true)
+       .UseAmountLimiter(true);
+
+// Or Somewhere in your code
 var currencyService = serviceProvider.UseArabicTextCurrency()
     .SetDefaultCurrency("ريال", "هللة")
     .SetCurrencyForms("ريال", "ريالان", "ريالات", "هللة", "هللتان", "هللات")
