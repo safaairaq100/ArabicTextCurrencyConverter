@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>Safaa</Authors>
+    <Authors>Safaa Abbas</Authors>
     <Description>Arabic text currency converter for .NET 8 with Arabic grammar, DI, formal mode (tanwīn), and "فقط ... لا غير".</Description>
     <PackageProjectUrl>https://github.com/safaairaq100/ArabicTextCurrencyConverter</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
@@ -14,21 +14,21 @@
     <PackageTags>Arabic;Currency;Text;Money;Dinar;Riyal;Pound;Fulus;Arabic Numerals</PackageTags>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Version>1.0.0</Version>
+    <PackageId>ArabicTextCurrencyConverter</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Title>Arabic Text Currency Converter</Title>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\safaa\Downloads\icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
