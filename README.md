@@ -35,11 +35,23 @@ It’s ideal for:
 
 ## 💻 Installation
 
-Add reference in your project:
+Install via the .NET CLI:
 
 ```bash
 dotnet add package ArabicTextCurrencyConverter
 ```
+
+Or via the Package Manager Console:
+
+```powershell
+Install-Package ArabicTextCurrencyConverter
+```
+
+**NuGet Package:**  
+[ArabicTextCurrencyConverter on NuGet.org](https://www.nuget.org/packages/ArabicTextCurrencyConverter)
+
+Import it in your code:
+
 ```csharp
 using ArabicTextCurrencyConverter;
 ```
