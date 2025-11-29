@@ -67,6 +67,12 @@ var currencyService = serviceProvider.UseArabicTextCurrency();
 string arabicText = currencyService.Convert(123.45);
 Console.WriteLine(arabicText); // Example output: "مئة و ثلاثة و عشرون دينار و خمسة و أربعون فلس"
 ```
+OR
+```csharp
+public class YourService (IArabicCurrencyService arabicCurrencyService){
+// Your logic ...  arabicCurrencyService.Convert(number);
+}
+```
 
 ### 3. Configuring Currency Units
 
