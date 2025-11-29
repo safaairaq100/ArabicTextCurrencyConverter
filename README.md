@@ -81,7 +81,7 @@ Console.WriteLine(arabicText); // Example output: "مئة و ثلاثة و عش�
 ```
 OR
 ```csharp
-public class YourService(private IArabicCurrencyService arabicCurrencyService)
+public class YourService(IArabicCurrencyService arabicCurrencyService)
 {
     // Your logic ...  arabicCurrencyService.Convert(number);
 }
